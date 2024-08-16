@@ -5,7 +5,7 @@ const app = express();
 const userRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 const postRouter = require('./routes/posts');
-const PORT = 3000;
+const PORT = 4000;
 const mongoose = require('mongoose');
 
 mongoose
