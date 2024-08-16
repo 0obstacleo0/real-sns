@@ -4,11 +4,13 @@ import "./Topbar.css";
 import { Link } from "react-router-dom";
 
 export default function Topbar() {
+  const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
+
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
         <Link to="/" style={{ textDecoration: "none" }}>
-        <span className="logo">Real SNS</span>
+          <span className="logo">Real SNS</span>
         </Link>
       </div>
       <div className="topbarCenter">
@@ -31,7 +33,11 @@ export default function Topbar() {
             <Notifications />
             <span className="topbarIconBadge">2</span>
           </div>
-          <img src="/assets/person/1.jpeg" alt="" className="topbarImg" />
+          <img
+            src={PUBLIC_FOLDER + "/person/1.jpeg"}
+            alt=""
+            className="topbarImg"
+          />
         </div>
       </div>
     </div>
