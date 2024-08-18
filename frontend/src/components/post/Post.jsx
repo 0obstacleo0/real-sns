@@ -20,8 +20,7 @@ export default function Post({ post }) {
           <div className="postTopLeft">
             <img
               src={
-                PUBLIC_FOLDER +
-                Users.filter((user) => user.id === post.id)[0].profilePicture
+                user.profilePicture || PUBLIC_FOLDER + "/person/noAvatar.png"
               }
               alt=""
               className="postProfileImg"
